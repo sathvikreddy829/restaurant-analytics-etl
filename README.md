@@ -6,7 +6,9 @@ A data engineering pipeline built on Databricks that ingests, transforms, and ag
 ---
 
 ## 🏗️ Architecture
-The pipeline follows a **medallion architecture** (Raw → Bronze → Silver → Gold) using Spark Declarative Pipelines and Delta tables stored in Databricks catalog volumes.
+The pipeline follows a **medallion architecture** (Bronze → Silver → Gold) using Spark Declarative Pipelines and Delta tables stored in Databricks catalog volumes.
+
+![image alt](https://github.com/sathvikreddy829/restaurant-analytics-etl/blob/c8518fe0ac0106548a7eeb1e319ceaed414418d1/project_architecture.png)
 
 ---
 
