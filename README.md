@@ -44,10 +44,10 @@ The pipeline follows a **medallion architecture** (Bronze → Silver → Gold) u
 ## 🥇 Gold Layer
 Analysis-ready aggregated tables:
 
-- **`d_sales_summary`**  
+- **`sales_summary`**  
   Daily aggregates of orders, revenue, order types (dine-in / takeaway / delivery), and unique customers per day.
 
-- **`d_customer_360`**  
+- **`customer_360`**  
   Full customer profile combining:
   - Lifetime spend  
   - Average order value  
