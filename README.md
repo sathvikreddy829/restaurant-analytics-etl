@@ -12,14 +12,16 @@ Batch (CSV): Five static datasets uploaded manually to the ws_dbxproject.00_raw.
 
 1.Bronze layer — Orders are ingested as Delta tables with minimal transformation. The three dimension tables (customers, restaurants, menu items) are ingested directly into Silver, skipping Bronze since they   
 require no streaming processing.
+
 2.Silver layer — Streaming tables are created from Bronze using Spark Declarative Pipelines. Each table applies data quality checks: type casting, null handling, deduplication , and domain validation (e.g. valid order status, payment method, positive amounts). 
 Key outputs: fact_orders, fact_order_items, dim_customers, dim_restaurants, dim_menu_items.
+
 3.Gold layer - Created analysis-ready aggregated tables.
 d_sales_summary — Daily aggregates of orders, revenue, order types (dine-in / takeaway / delivery), and unique customers per day.
 d_customer_360 — Full customer profile combining lifetime spend, average order value, total orders, loyalty tier (Bronze → Silver → Gold → Platinum), favorite restaurant, favorite menu item, and review stats.
 
 Tech Stack:
-Databricks 
+Databricks
 Spark Declarative Pipelines
 PySpark
 Delta Lake
