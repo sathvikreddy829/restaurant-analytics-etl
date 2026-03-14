@@ -21,8 +21,8 @@ d_sales_summary — Daily aggregates of orders, revenue, order types (dine-in / 
 d_customer_360 — Full customer profile combining lifetime spend, average order value, total orders, loyalty tier (Bronze → Silver → Gold → Platinum), favorite restaurant, favorite menu item, and review stats.
 
 Tech Stack:
-Databricks
-Spark Declarative Pipelines
-PySpark
-Delta Lake
+Databricks, 
+Spark Declarative Pipelines, 
+PySpark, 
+Delta Lake and 
 Databricks SQL
